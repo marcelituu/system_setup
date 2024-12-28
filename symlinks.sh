@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Directorios
-DOTFILES_CONFIG="$HOME/.dotfiles/.config"
+DOTFILES_CONFIG="$HOME/system_setup/.dotfiles/.config"
 TARGET_CONFIG="$HOME/.config"
 
 # Verifica que exista el directorio .dotfiles/.config
@@ -27,7 +27,7 @@ for item in "$DOTFILES_CONFIG"/*; do
     rm -rf "$symlink_target"
   fi
 
-  # Crear el symlink
+  # Crear el symlink directamente al contenido de .dotfiles/.config
   ln -s "$item" "$symlink_target"
   echo "Enlace simbólico creado: $symlink_target -> $item"
 done
