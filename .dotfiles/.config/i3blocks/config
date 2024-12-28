@@ -1,0 +1,59 @@
+# i3blocks configuration file
+#
+# The i3blocks man page describes the usage of the binary,
+# and its website describes the configuration:
+#
+#     https://vivien.github.io/i3blocks
+
+
+# Global properties
+separator=true
+separator_block_width=15
+
+[greetings]
+color=#FF0052
+command=echo "Trust No One"
+interval=once
+
+
+[memoria]
+command=sh "$HOME"/.config/i3blocks/memoria.sh
+interval=30
+color=#52aeff
+#border=#52aeff
+
+[ip]
+#command=hostname -i | awk '{ print "IP:" $1 }'
+command=ip addr | grep 192 | awk '{print $2}' | sed 's/\/.*//g'
+interval=60
+color=#91E78B
+#border=#91E78B
+
+
+[volume]
+command=sh /home/marcel/.config/i3blocks/volume.sh
+#LABEL=♪ 
+LABEL=VOL 
+interval=once
+signal=10
+#STEP=5%
+#MIXER=[determined automatically]
+#SCONTROL=[determined automatically
+
+[time]
+command=date '+%d-%m-%Y %H:%M'
+interval=1
+
+[CPUtemp]
+command=sensors | awk '/Core 0/ {print +$3"ºC"}'
+markup=pango
+interval=30
+color=#FFA500
+
+
+[battery]
+command=sh ~/.config/i3blocks/bat.sh
+markup=pango
+interval=30
+color=#FFFF00
+#border=#3192d4
