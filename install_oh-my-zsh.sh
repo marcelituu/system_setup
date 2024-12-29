@@ -37,5 +37,25 @@ else
     exit 1
 fi
 
+# Verificar si el archivo .zshrc existe en .dotfiles
+zshrc_source="$HOME/.dotfiles/.zshrc"
+zshrc_destination="$HOME/.zshrc"
+
+if [ ! -f "$zshrc_source" ]; then
+    echo "No se encontró el archivo $zshrc_source. Por favor, verifica que exista en .dotfiles."
+    exit 1
+fi
+
+# Copiar el archivo .zshrc al directorio home
+echo "Copiando el archivo .zshrc a $HOME"
+cp "$zshrc_source" "$zshrc_destination"
+
+if [ $? -eq 0 ]; then
+    echo "Archivo .zshrc copiado exitosamente."
+else
+    echo "Hubo un error al copiar el archivo .zshrc."
+    exit 1
+fi
+
 # Mensaje final
-echo "Instalación completa. Asegúrate de configurar el tema 'steeef' en tu archivo ~/.zshrc."
+echo "Instalación completa. Asegúrate de que el tema 'steeef' esté configurado en tu archivo ~/.zshrc."
