@@ -57,7 +57,7 @@ multiplier = 3
 save_to_clipboard = true
 
 [terminal.shell]
-program = "/usr/bin/zsh" # If using nixos change do "which zsh" and change it for the output
+program = "/run/current-system/sw/bin/zsh" # If using nixos change do "which zsh" and change it for the output
 
 [window]
 opacity = 1
