@@ -10,7 +10,8 @@
 
     pavucontrol
     # -- dev --
-
+    # -- browsers --
+    google-chrome
     # -- code editor --
     vscode
     nixpkgs-fmt #allow extension nix ide vscode

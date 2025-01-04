@@ -53,6 +53,7 @@
     tldr
     xclip
     neofetch
+    speedtest-cli
   ];
 
   # Set your time zone.

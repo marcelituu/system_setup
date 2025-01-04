@@ -26,6 +26,7 @@
         arandr
         networkmanagerapplet
         alsa-utils
+	lm_sensors
         # picom test usage
 	
      ];
