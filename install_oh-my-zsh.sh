@@ -18,7 +18,7 @@ else
 fi
 
 # Verificar si el archivo de tema existe en .dotfiles
-theme_source="$HOME/.dotfiles/steeef.zsh-theme"
+theme_source=".dotfiles/steeef.zsh-theme"
 theme_destination="$HOME/.oh-my-zsh/themes/"
 
 if [ ! -f "$theme_source" ]; then
@@ -38,7 +38,7 @@ else
 fi
 
 # Verificar si el archivo .zshrc existe en .dotfiles
-zshrc_source="$HOME/.dotfiles/.zshrc"
+zshrc_source=".dotfiles/.zshrc"
 zshrc_destination="$HOME/.zshrc"
 
 if [ ! -f "$zshrc_source" ]; then
