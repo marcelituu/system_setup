@@ -19,6 +19,8 @@ in
     "${modules}/base.nix"
     "${modules}/desktop.nix"
     "${modules}/i3.nix"
+    "${modules}/uni.nix"
+    "${modules}/virtualisation.nix"
   ];
 
 

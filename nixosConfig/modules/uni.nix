@@ -9,8 +9,10 @@
   environment.systemPackages = with pkgs; [
 
     # -- code editor --
-    jetbrains.idea-community
-   
+    jetbrains.idea-community-bin
+    
+    # -- java --
+    jdk21
   ];
 
 

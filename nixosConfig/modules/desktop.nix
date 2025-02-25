@@ -12,18 +12,26 @@
     # -- dev --
     # -- browsers --
     google-chrome
+    python3
+    
     # -- code editor --
     vscode
     nixpkgs-fmt #allow extension nix ide vscode
     gedit
     obsidian
-
+  
     # -- icons --
     adwaita-icon-theme
     papirus-icon-theme
 
     # -- notifications --
     dunst
+
+    # -- browsers --
+    google-chrome
+    
+    # -- social --
+    discord
   ];
 
 
@@ -45,8 +53,9 @@
       middleEmulation = false;
     };
     touchpad = {
-      accelProfile = "flat";
-      naturalScrolling = true;
+      accelProfile = "flat"; 
+      #accelSpeed = 0.5;
+      naturalScrolling = false;
     };
   };
 
