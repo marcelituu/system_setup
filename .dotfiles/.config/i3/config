@@ -186,8 +186,9 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 bindsym $mod+p exec sh /home/marcel/.config/rofi/powermenu.sh
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+# Change brightness
+bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
@@ -203,7 +204,7 @@ bar {
 	    	        }
 }
 #exec_always --no-startup-id /home/marcel/Unity/i3-unity-fix/i3unityfix/i3unityfix.py
-exec setxkbmap es
+exec --no-startup-id setxkbmap es
 exec nm-applet --indicator
 bindsym $mod+shift+s exec flameshot gui
 #Con esto quitamos el nombre de cada ventana
