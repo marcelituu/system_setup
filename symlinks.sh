@@ -1,6 +1,11 @@
 #!/bin/bash
 
+
 # Directorios
+DOTFILES="$HOME/system_setup/.dotfiles"
+TARGET="$HOME"
+ln -s "$DOTFILES/.editorconfig" "$TARGET/.editorconfig"
+
 DOTFILES_CONFIG="$HOME/system_setup/.dotfiles/.config"
 TARGET_CONFIG="$HOME/.config"
 
@@ -32,4 +37,5 @@ for item in "$DOTFILES_CONFIG"/*; do
   echo "Enlace simbólico creado: $symlink_target -> $item"
 done
 
-echo "Todos los enlaces simbólicos se han creado correctamente."
+echo "Todos los enlaces simbólicos .config se han creado correctamente."
+
