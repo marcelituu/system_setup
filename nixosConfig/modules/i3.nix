@@ -26,7 +26,8 @@
         arandr
         networkmanagerapplet
         alsa-utils
-	lm_sensors
+        pulseaudio
+	      lm_sensors
         # picom test usage
 	
      ];

@@ -32,6 +32,9 @@
     
     # -- social --
     discord
+
+    # -- psw --
+    pcsx2
   ];
 
 
