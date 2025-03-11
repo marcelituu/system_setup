@@ -4,8 +4,19 @@
 , self
 , ...
 }:
-{
 
+
+  let vscode-insiders = (pkgs.vscode.override { isInsiders = true; }).overrideAttrs (oldAttrs: {
+    src = (
+      builtins.fetchTarball {
+        url = "https://code.visualstudio.com/sha/download?build=insider&os=linux-x64";
+        sha256 = "sha256:0vmndc40z0ahijjghpfb52kkkydcr107rbsg0hlan4yg5db1kl8n";
+      }
+    );
+    version = "1.99-insider";
+  });
+  in 
+{
   environment.systemPackages = with pkgs; [
 
     pavucontrol
@@ -16,6 +27,7 @@
     
     # -- code editor --
     vscode
+    vscode-insiders
     nixpkgs-fmt #allow extension nix ide vscode
     gedit
     obsidian
@@ -37,8 +49,9 @@
     pcsx2
 
     self.packages.${pkgs.system}.windsurf
-
+    
   ];
+  
 
 
   programs.nix-ld.enable = true;
