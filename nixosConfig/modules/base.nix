@@ -22,6 +22,7 @@
       experimental-features = [
         "nix-command"
         "flakes"
+        "pipe-operators"
       ];
       auto-optimise-store = true;
     };
@@ -60,6 +61,8 @@
     fzf
     zoxide
     speedtest-cli
+    nautilus
+    jq
   ];
 
   # Set your time zone.

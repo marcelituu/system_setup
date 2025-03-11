@@ -21,6 +21,7 @@ in
     "${modules}/i3.nix"
     "${modules}/uni.nix"
     "${modules}/virtualisation.nix"
+    #"${modules}/sway.nix"
   ];
 
 

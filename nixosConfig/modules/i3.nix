@@ -28,7 +28,9 @@
         alsa-utils
         pulseaudio
 	      lm_sensors
+        swayosd
         # picom test usage
+        picom
 	
      ];
     };

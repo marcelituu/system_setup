@@ -1,7 +1,7 @@
 { config
 , pkgs
 , lib
-, inputs
+, self
 , ...
 }:
 {
@@ -35,6 +35,9 @@
 
     # -- psw --
     pcsx2
+
+    self.packages.${pkgs.system}.windsurf
+
   ];
 
 
@@ -81,6 +84,8 @@
     packages = with pkgs; [
       jetbrains-mono
       nerd-fonts.symbols-only
+      font-awesome
+      rubik
 
     ];
     fontconfig = {
