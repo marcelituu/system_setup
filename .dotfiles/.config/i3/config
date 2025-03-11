@@ -17,7 +17,8 @@ font pango:monospace 12
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
+#font pango:DejaVu Sans Mono 8        alsa-utils
+
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
@@ -209,6 +210,6 @@ exec nm-applet --indicator
 bindsym $mod+shift+s exec flameshot gui
 #Con esto quitamos el nombre de cada ventana
 for_window [class="^.*"] border pixel 3
-exec feh --bg-fill --randomize /home/marcel/Descargas/wallpapers/*
-exec picom
+exec feh --bg-fill --randomize /home/marcel/wallpapers/*
+exec --no-startup-id picom -b
 gaps inner 0

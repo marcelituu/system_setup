@@ -60,7 +60,7 @@ save_to_clipboard = true
 program = "/run/current-system/sw/bin/zsh" # If using nixos change do "which zsh" and change it for the output
 
 [window]
-opacity = 1
+opacity = 0.95
 
 [window.class]
 general = "Alacritty"
