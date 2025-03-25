@@ -63,6 +63,8 @@
     speedtest-cli
     nautilus
     jq
+    gnome-keyring
+    gnome-keysign
   ];
 
   # Set your time zone.

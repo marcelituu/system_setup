@@ -48,6 +48,13 @@
     # -- psw --
     pcsx2
 
+    # -- k8s
+    kubectl
+    minikube
+    kubernetes-helm
+    docker-machine-kvm2
+    kubectx
+
     self.packages.${pkgs.system}.windsurf
     
   ];
