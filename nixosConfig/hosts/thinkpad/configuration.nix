@@ -28,5 +28,14 @@
     brightnessctl
   ];
 
+  services.tlp = {
+    enable = true;
+    settings = {
+      PCIE_ASPM_ON_AC = "powersave";
+      PCIE_ASPM_ON_BAT = "powersave";
+    };
+  };
+
+
  
 }
