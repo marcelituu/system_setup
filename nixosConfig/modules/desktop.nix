@@ -56,7 +56,10 @@
     kubectx
 
     self.packages.${pkgs.system}.windsurf
+
+    brave
     
+    waydroid
   ];
   
 

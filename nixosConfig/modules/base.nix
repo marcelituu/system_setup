@@ -65,6 +65,7 @@
     jq
     gnome-keyring
     gnome-keysign
+    ncdu
   ];
 
   # Set your time zone.

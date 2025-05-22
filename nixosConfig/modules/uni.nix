@@ -15,7 +15,8 @@
     jdk21
 
     # --
-    nodejs_23
+    #nodejs_23
+    libreoffice
   ];
 
 
